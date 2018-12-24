@@ -58,11 +58,11 @@ let colors = [
 
 ]
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 200; i++) {
     let x = Math.random() * (innerWidth - 20) + 10
     let y = Math.random() * (innerHeight -20) + 10
-    let vx = Math.random() + 1
-    let vy = Math.random() + 0.5
+    let vx = Math.random() * 2 + 1
+    let vy = Math.random() * 1 + 1
     let radius = Math.random() * (8 - 3) + 3
     let color = colors[Math.floor(Math.random() * colors.length)]
     let circle = new Circle(x, y, vx, vy, radius, color)
@@ -97,8 +97,8 @@ function animate() {
         circles[i].update()
     }
     ctx.fillStyle = 'black'
-    ctx.font = "italic 30px Great Vibes";
-    ctx.fillText("Merry Christmas", innerWidth/2 - 100, innerHeight/2 - 30);
+    ctx.font = "italic 80px Great Vibes";
+    ctx.fillText("Merry Christmas", innerWidth/2 - 300, innerHeight/2 - 30);
 
 }
 
